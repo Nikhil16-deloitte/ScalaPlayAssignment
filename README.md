@@ -1,0 +1,2 @@
+# ScalaPlayAssignment
+Scala Play Assignment
