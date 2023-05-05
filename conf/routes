@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# IPL Match details APis
+
+GET     /match-details              controllers.IPLMatchDataController.getAllMatches()
+GET     /match-details/:matchId             controllers.IPLMatchDataController.getMatch(matchId:Int)
+GET     /match-details/:team           controllers.IPLMatchDataController.getMatchesByTeam(team:String)
+
+GET     /win/:team              controllers.TeamWinsController.getWin(team:String)
+GET     /getallwins             controllers.TeamWinsController.getAllWins()
